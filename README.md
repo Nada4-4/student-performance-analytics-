@@ -1,9 +1,10 @@
 Begin
 Input student_id, modules[] with marks
 total ← 0
-
 FOR each module IN modules
-    total ← total + module.mark
+    IF module.mark >= 0 THEN         
+        total ← total + module.mark
+    END IF
 END FOR
 
 average ← total / number_of_modules
